@@ -1,0 +1,58 @@
+extends layout
+
+block content
+    h1 RSFA
+
+    #wrapper
+
+        #playerInfo
+            h2 Player Info
+            p
+                strong Mnem:
+                |  <span id='playerInfoMnem'></span>
+                br
+                strong First:
+                |  <span id='playerInfoFirst'></span>
+                br
+                strong Last:
+                |  <span id='playerInfoLast'></span>
+                br
+                strong Nat:
+                |  <span id='playerInfoNat'></span>
+                br
+                strong Dob:
+                |  <span id='playerInfoDob'></span>
+                br
+                strong Pob:
+                |  <span id='playerInfoPob'></span>
+                br
+                strong Cob:
+                |  <span id='playerInfoCob'></span>
+
+        h2 Add Player
+        #addPlayer
+            fieldset
+                input#inputPlayerFirstName(type='text', placeholder='FirstName')
+                input#inputPlayerLastName(type='text', placeholder='LastName')
+                br
+                input#inputPlayerNat(type='text', placeholder='Nationality')
+                input#inputPlayerDob(type='text', placeholder='Dob')
+                br
+                input#inputPlayerPob(type='text', placeholder='Pob')
+                input#inputPlayerCob(type='text', placeholder='Cob')
+                br
+                button#btnAddPlayer Add Player
+
+        h2 Player List
+        #playerList
+            table
+                thead
+                    th Mnem
+                    th Name
+                    th Nat
+                    th DOB
+                    th POB
+                    th COB
+                    th Delete?
+                tbody
+
