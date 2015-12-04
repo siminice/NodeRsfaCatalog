@@ -26,7 +26,7 @@ function populateTable() {
         $.each(data, function(){
             tableContent += '<tr>';
             tableContent += '<td><a href="#" class="linkshowplayer" rel="' + this.mnem + '">' + this.mnem + '</a></td>';
-            tableContent += '<td>' + this.first + ' ' + this.last + '</td>';
+            tableContent += '<td>' + this.given + ' ' + this.family + '</td>';
             tableContent += '<td>' + this.nat + '</td>';
             tableContent += '<td>' + this.dob + '</td>';
             tableContent += '<td>' + this.pob + '</td>';
@@ -66,8 +66,8 @@ function showPlayerInfo(event) {
 
     //Populate Info Box
     $('#playerInfoMnem').text(thisPlayerObject.mnem);
-    $('#playerInfoFirst').text(thisPlayerObject.first);
-    $('#playerInfoLast').text(thisPlayerObject.last);
+    $('#playerInfoGiven').text(thisPlayerObject.given);
+    $('#playerInfoFamily').text(thisPlayerObject.family);
     $('#playerInfoNat').text(thisPlayerObject.nat);
     $('#playerInfoDob').text(thisPlayerObject.dob);
     $('#playerInfoPob').text(thisPlayerObject.pob);
@@ -91,8 +91,8 @@ function addPlayer(event) {
         // If it is, compile all Player info into one object
         var newPlayer = {
             'mnem': '______',
-            'first': $('#addPlayer fieldset input#inputPlayerFirstName').val(),
-            'last': $('#addPlayer fieldset input#inputPlayerLastName').val(),
+            'given': $('#addPlayer fieldset input#inputPlayerGivenName').val(),
+            'family': $('#addPlayer fieldset input#inputPlayerFamilyName').val(),
             'nat': $('#addPlayer fieldset input#inputPlayerNat').val(),
             'dob': $('#addPlayer fieldset input#inputPlayerDob').val(),
             'pob': $('#addPlayer fieldset input#inputPlayerPob').val(),

@@ -9,7 +9,7 @@ var bodyParser = require('body-parser');
 // Added code
 var mongo = require('mongodb');
 var monk = require('monk');
-var db = monk('localhost:27017/test');
+var db = monk('localhost:27017/rsfa');
 
 // --------------
 var routes = require('./routes/index');
